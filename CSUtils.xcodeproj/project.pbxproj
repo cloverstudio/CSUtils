@@ -31,7 +31,34 @@
 		1F41BDF51891786B0028CF2E /* NSString+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDF31891786B0028CF2E /* NSString+Hash.h */; };
 		1F41BDF61891786B0028CF2E /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDF41891786B0028CF2E /* NSString+Hash.m */; };
 		1F41BDF81891791E0028CF2E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */; };
+		1F45567C1892C6AF00E1CDA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDB8189176920028CF2E /* Foundation.framework */; };
+		1F45567E1892C6AF00E1CDA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F45567D1892C6AF00E1CDA7 /* CoreGraphics.framework */; };
+		1F4556801892C6AF00E1CDA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F45567F1892C6AF00E1CDA7 /* UIKit.framework */; };
+		1F4556861892C6AF00E1CDA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F4556841892C6AF00E1CDA7 /* InfoPlist.strings */; };
+		1F4556881892C6AF00E1CDA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4556871892C6AF00E1CDA7 /* main.m */; };
+		1F45568C1892C6AF00E1CDA7 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45568B1892C6AF00E1CDA7 /* CSAppDelegate.m */; };
+		1F45568F1892C6AF00E1CDA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F45568D1892C6AF00E1CDA7 /* Main.storyboard */; };
+		1F4556921892C6AF00E1CDA7 /* CSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4556911892C6AF00E1CDA7 /* CSViewController.m */; };
+		1F4556941892C6AF00E1CDA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F4556931892C6AF00E1CDA7 /* Images.xcassets */; };
+		1F45569B1892C6B000E1CDA7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F45569A1892C6B000E1CDA7 /* XCTest.framework */; };
+		1F45569C1892C6B000E1CDA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDB8189176920028CF2E /* Foundation.framework */; };
+		1F45569D1892C6B000E1CDA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F45567F1892C6AF00E1CDA7 /* UIKit.framework */; };
+		1F4556A51892C6B000E1CDA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F4556A31892C6B000E1CDA7 /* InfoPlist.strings */; };
+		1F4556A71892C6B000E1CDA7 /* CSLazyLoadTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4556A61892C6B000E1CDA7 /* CSLazyLoadTestsTests.m */; };
+		1F4556AE1892CAD000E1CDA7 /* CSUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDB5189176920028CF2E /* CSUtils.framework */; };
+		1F4556AF1892CB1E00E1CDA7 /* CSLazyLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDCD189176C50028CF2E /* CSLazyLoadController.m */; };
+		1F4556B01892CB2100E1CDA7 /* CSCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDCB189176C50028CF2E /* CSCacheManager.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F45569E1892C6B000E1CDA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F41BDA9189176920028CF2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F45567A1892C6AF00E1CDA7;
+			remoteInfo = CSLazyLoadTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1F41BDB5189176920028CF2E /* CSUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = CSUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +88,24 @@
 		1F41BDF31891786B0028CF2E /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		1F41BDF41891786B0028CF2E /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1F45567B1892C6AF00E1CDA7 /* CSLazyLoadTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSLazyLoadTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F45567D1892C6AF00E1CDA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1F45567F1892C6AF00E1CDA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1F4556831892C6AF00E1CDA7 /* CSLazyLoadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CSLazyLoadTests-Info.plist"; sourceTree = "<group>"; };
+		1F4556851892C6AF00E1CDA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1F4556871892C6AF00E1CDA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1F4556891892C6AF00E1CDA7 /* CSLazyLoadTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSLazyLoadTests-Prefix.pch"; sourceTree = "<group>"; };
+		1F45568A1892C6AF00E1CDA7 /* CSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAppDelegate.h; sourceTree = "<group>"; };
+		1F45568B1892C6AF00E1CDA7 /* CSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAppDelegate.m; sourceTree = "<group>"; };
+		1F45568E1892C6AF00E1CDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F4556901892C6AF00E1CDA7 /* CSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSViewController.h; sourceTree = "<group>"; };
+		1F4556911892C6AF00E1CDA7 /* CSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSViewController.m; sourceTree = "<group>"; };
+		1F4556931892C6AF00E1CDA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1F4556991892C6B000E1CDA7 /* CSLazyLoadTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSLazyLoadTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F45569A1892C6B000E1CDA7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1F4556A21892C6B000E1CDA7 /* CSLazyLoadTestsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CSLazyLoadTestsTests-Info.plist"; sourceTree = "<group>"; };
+		1F4556A41892C6B000E1CDA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1F4556A61892C6B000E1CDA7 /* CSLazyLoadTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSLazyLoadTestsTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +118,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F4556781892C6AF00E1CDA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4556AE1892CAD000E1CDA7 /* CSUtils.framework in Frameworks */,
+				1F45567E1892C6AF00E1CDA7 /* CoreGraphics.framework in Frameworks */,
+				1F4556801892C6AF00E1CDA7 /* UIKit.framework in Frameworks */,
+				1F45567C1892C6AF00E1CDA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F4556961892C6B000E1CDA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F45569B1892C6B000E1CDA7 /* XCTest.framework in Frameworks */,
+				1F45569D1892C6B000E1CDA7 /* UIKit.framework in Frameworks */,
+				1F45569C1892C6B000E1CDA7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				1F41BDBA189176920028CF2E /* CSUtils */,
+				1F4556761892C67D00E1CDA7 /* CSUtilsTests */,
+				1F4556811892C6AF00E1CDA7 /* CSLazyLoadTests */,
+				1F4556A01892C6B000E1CDA7 /* CSLazyLoadTestsTests */,
 				1F41BDB7189176920028CF2E /* Frameworks */,
 				1F41BDB6189176920028CF2E /* Products */,
 			);
@@ -89,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				1F41BDB5189176920028CF2E /* CSUtils.framework */,
+				1F45567B1892C6AF00E1CDA7 /* CSLazyLoadTests.app */,
+				1F4556991892C6B000E1CDA7 /* CSLazyLoadTestsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +169,9 @@
 			children = (
 				1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */,
 				1F41BDB8189176920028CF2E /* Foundation.framework */,
+				1F45567D1892C6AF00E1CDA7 /* CoreGraphics.framework */,
+				1F45567F1892C6AF00E1CDA7 /* UIKit.framework */,
+				1F45569A1892C6B000E1CDA7 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -181,6 +255,56 @@
 			path = External;
 			sourceTree = "<group>";
 		};
+		1F4556761892C67D00E1CDA7 /* CSUtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CSUtilsTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		1F4556811892C6AF00E1CDA7 /* CSLazyLoadTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F45568A1892C6AF00E1CDA7 /* CSAppDelegate.h */,
+				1F45568B1892C6AF00E1CDA7 /* CSAppDelegate.m */,
+				1F45568D1892C6AF00E1CDA7 /* Main.storyboard */,
+				1F4556901892C6AF00E1CDA7 /* CSViewController.h */,
+				1F4556911892C6AF00E1CDA7 /* CSViewController.m */,
+				1F4556931892C6AF00E1CDA7 /* Images.xcassets */,
+				1F4556821892C6AF00E1CDA7 /* Supporting Files */,
+			);
+			path = CSLazyLoadTests;
+			sourceTree = "<group>";
+		};
+		1F4556821892C6AF00E1CDA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F4556831892C6AF00E1CDA7 /* CSLazyLoadTests-Info.plist */,
+				1F4556841892C6AF00E1CDA7 /* InfoPlist.strings */,
+				1F4556871892C6AF00E1CDA7 /* main.m */,
+				1F4556891892C6AF00E1CDA7 /* CSLazyLoadTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F4556A01892C6B000E1CDA7 /* CSLazyLoadTestsTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F4556A61892C6B000E1CDA7 /* CSLazyLoadTestsTests.m */,
+				1F4556A11892C6B000E1CDA7 /* Supporting Files */,
+			);
+			path = CSLazyLoadTestsTests;
+			sourceTree = "<group>";
+		};
+		1F4556A11892C6B000E1CDA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F4556A21892C6B000E1CDA7 /* CSLazyLoadTestsTests-Info.plist */,
+				1F4556A31892C6B000E1CDA7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -227,6 +351,41 @@
 			productReference = 1F41BDB5189176920028CF2E /* CSUtils.framework */;
 			productType = "com.apple.product-type.framework.static";
 		};
+		1F45567A1892C6AF00E1CDA7 /* CSLazyLoadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F4556A81892C6B000E1CDA7 /* Build configuration list for PBXNativeTarget "CSLazyLoadTests" */;
+			buildPhases = (
+				1F4556771892C6AF00E1CDA7 /* Sources */,
+				1F4556781892C6AF00E1CDA7 /* Frameworks */,
+				1F4556791892C6AF00E1CDA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSLazyLoadTests;
+			productName = CSLazyLoadTests;
+			productReference = 1F45567B1892C6AF00E1CDA7 /* CSLazyLoadTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F4556981892C6B000E1CDA7 /* CSLazyLoadTestsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F4556AB1892C6B000E1CDA7 /* Build configuration list for PBXNativeTarget "CSLazyLoadTestsTests" */;
+			buildPhases = (
+				1F4556951892C6B000E1CDA7 /* Sources */,
+				1F4556961892C6B000E1CDA7 /* Frameworks */,
+				1F4556971892C6B000E1CDA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F45569F1892C6B000E1CDA7 /* PBXTargetDependency */,
+			);
+			name = CSLazyLoadTestsTests;
+			productName = CSLazyLoadTestsTests;
+			productReference = 1F4556991892C6B000E1CDA7 /* CSLazyLoadTestsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,6 +394,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Clover-Studio";
+				TargetAttributes = {
+					1F4556981892C6B000E1CDA7 = {
+						TestTargetID = 1F41BDB4189176920028CF2E;
+					};
+				};
 			};
 			buildConfigurationList = 1F41BDAC189176920028CF2E /* Build configuration list for PBXProject "CSUtils" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -242,6 +406,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 1F41BDA8189176920028CF2E;
 			productRefGroup = 1F41BDB6189176920028CF2E /* Products */;
@@ -249,6 +414,8 @@
 			projectRoot = "";
 			targets = (
 				1F41BDB4189176920028CF2E /* CSUtils */,
+				1F45567A1892C6AF00E1CDA7 /* CSLazyLoadTests */,
+				1F4556981892C6B000E1CDA7 /* CSLazyLoadTestsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +426,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F41BDBF189176920028CF2E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F4556791892C6AF00E1CDA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4556941892C6AF00E1CDA7 /* Images.xcassets in Resources */,
+				1F4556861892C6AF00E1CDA7 /* InfoPlist.strings in Resources */,
+				1F45568F1892C6AF00E1CDA7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F4556971892C6B000E1CDA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4556A51892C6B000E1CDA7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,13 +508,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1F4556771892C6AF00E1CDA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4556B01892CB2100E1CDA7 /* CSCacheManager.m in Sources */,
+				1F45568C1892C6AF00E1CDA7 /* CSAppDelegate.m in Sources */,
+				1F4556881892C6AF00E1CDA7 /* main.m in Sources */,
+				1F4556921892C6AF00E1CDA7 /* CSViewController.m in Sources */,
+				1F4556AF1892CB1E00E1CDA7 /* CSLazyLoadController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F4556951892C6B000E1CDA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4556A71892C6B000E1CDA7 /* CSLazyLoadTestsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F45569F1892C6B000E1CDA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F45567A1892C6AF00E1CDA7 /* CSLazyLoadTests */;
+			targetProxy = 1F45569E1892C6B000E1CDA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1F41BDBD189176920028CF2E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1F41BDBE189176920028CF2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1F4556841892C6AF00E1CDA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F4556851892C6AF00E1CDA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1F45568D1892C6AF00E1CDA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F45568E1892C6AF00E1CDA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F4556A31892C6B000E1CDA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F4556A41892C6B000E1CDA7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -439,6 +676,86 @@
 			};
 			name = Release;
 		};
+		1F4556A91892C6B000E1CDA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CSLazyLoadTests/CSLazyLoadTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CSLazyLoadTests/CSLazyLoadTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1F4556AA1892C6B000E1CDA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CSLazyLoadTests/CSLazyLoadTests-Prefix.pch";
+				INFOPLIST_FILE = "CSLazyLoadTests/CSLazyLoadTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1F4556AC1892C6B000E1CDA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CSUtils.framework/Versions/A/CSUtils";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CSLazyLoadTests/CSLazyLoadTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CSLazyLoadTestsTests/CSLazyLoadTestsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1F4556AD1892C6B000E1CDA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CSUtils.framework/Versions/A/CSUtils";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CSLazyLoadTests/CSLazyLoadTests-Prefix.pch";
+				INFOPLIST_FILE = "CSLazyLoadTestsTests/CSLazyLoadTestsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -459,6 +776,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1F4556A81892C6B000E1CDA7 /* Build configuration list for PBXNativeTarget "CSLazyLoadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4556A91892C6B000E1CDA7 /* Debug */,
+				1F4556AA1892C6B000E1CDA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F4556AB1892C6B000E1CDA7 /* Build configuration list for PBXNativeTarget "CSLazyLoadTestsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F4556AC1892C6B000E1CDA7 /* Debug */,
+				1F4556AD1892C6B000E1CDA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
