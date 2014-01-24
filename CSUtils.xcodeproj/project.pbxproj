@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F41BDB9189176920028CF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDB8189176920028CF2E /* Foundation.framework */; };
+		1F41BDBF189176920028CF2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F41BDBD189176920028CF2E /* InfoPlist.strings */; };
+		1F41BDDC189176C50028CF2E /* CSGenericOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDC7189176C50028CF2E /* CSGenericOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDDD189176C50028CF2E /* CSGenericOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDC8189176C50028CF2E /* CSGenericOperation.m */; };
+		1F41BDDE189176C50028CF2E /* CSCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDCA189176C50028CF2E /* CSCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDDF189176C50028CF2E /* CSCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDCB189176C50028CF2E /* CSCacheManager.m */; };
+		1F41BDE0189176C50028CF2E /* CSLazyLoadController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDCC189176C50028CF2E /* CSLazyLoadController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDE1189176C50028CF2E /* CSLazyLoadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDCD189176C50028CF2E /* CSLazyLoadController.m */; };
+		1F41BDE2189176C50028CF2E /* CSMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDCF189176C50028CF2E /* CSMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDE3189176C50028CF2E /* CSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDD0189176C50028CF2E /* CSMessage.m */; };
+		1F41BDE4189176C50028CF2E /* CSMessageCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDD1189176C50028CF2E /* CSMessageCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDE5189176C50028CF2E /* CSMessageCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDD2189176C50028CF2E /* CSMessageCenter.m */; };
+		1F41BDE7189176C50028CF2E /* CSScheduledNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDD5189176C50028CF2E /* CSScheduledNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDE8189176C50028CF2E /* CSScheduledNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDD6189176C50028CF2E /* CSScheduledNotification.m */; };
+		1F41BDE9189176C50028CF2E /* CSScheduledNotificationCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDD7189176C50028CF2E /* CSScheduledNotificationCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDEA189176C50028CF2E /* CSScheduledNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDD8189176C50028CF2E /* CSScheduledNotificationCenter.m */; };
+		1F41BDEB189176C50028CF2E /* CSUReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDDA189176C50028CF2E /* CSUReachability.h */; };
+		1F41BDEC189176C50028CF2E /* CSUReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDDB189176C50028CF2E /* CSUReachability.m */; };
+		1F41BDEF189176F10028CF2E /* CSBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDED189176F10028CF2E /* CSBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDF0189176F10028CF2E /* CSConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDEE189176F10028CF2E /* CSConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDF2189177510028CF2E /* CSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDF1189177510028CF2E /* CSUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F41BDF51891786B0028CF2E /* NSString+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDF31891786B0028CF2E /* NSString+Hash.h */; };
+		1F41BDF61891786B0028CF2E /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDF41891786B0028CF2E /* NSString+Hash.m */; };
+		1F41BDF81891791E0028CF2E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F41BDB5189176920028CF2E /* CSUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = CSUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F41BDB8189176920028CF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1F41BDBC189176920028CF2E /* CSUtils-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CSUtils-Info.plist"; sourceTree = "<group>"; };
+		1F41BDBE189176920028CF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1F41BDC0189176920028CF2E /* CSUtils-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSUtils-Prefix.pch"; sourceTree = "<group>"; };
+		1F41BDC7189176C50028CF2E /* CSGenericOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSGenericOperation.h; sourceTree = "<group>"; };
+		1F41BDC8189176C50028CF2E /* CSGenericOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSGenericOperation.m; sourceTree = "<group>"; };
+		1F41BDCA189176C50028CF2E /* CSCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCacheManager.h; sourceTree = "<group>"; };
+		1F41BDCB189176C50028CF2E /* CSCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCacheManager.m; sourceTree = "<group>"; };
+		1F41BDCC189176C50028CF2E /* CSLazyLoadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLazyLoadController.h; sourceTree = "<group>"; };
+		1F41BDCD189176C50028CF2E /* CSLazyLoadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLazyLoadController.m; sourceTree = "<group>"; };
+		1F41BDCF189176C50028CF2E /* CSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMessage.h; sourceTree = "<group>"; };
+		1F41BDD0189176C50028CF2E /* CSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMessage.m; sourceTree = "<group>"; };
+		1F41BDD1189176C50028CF2E /* CSMessageCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMessageCenter.h; sourceTree = "<group>"; };
+		1F41BDD2189176C50028CF2E /* CSMessageCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMessageCenter.m; sourceTree = "<group>"; };
+		1F41BDD5189176C50028CF2E /* CSScheduledNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSScheduledNotification.h; sourceTree = "<group>"; };
+		1F41BDD6189176C50028CF2E /* CSScheduledNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSScheduledNotification.m; sourceTree = "<group>"; };
+		1F41BDD7189176C50028CF2E /* CSScheduledNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSScheduledNotificationCenter.h; sourceTree = "<group>"; };
+		1F41BDD8189176C50028CF2E /* CSScheduledNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSScheduledNotificationCenter.m; sourceTree = "<group>"; };
+		1F41BDDA189176C50028CF2E /* CSUReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUReachability.h; sourceTree = "<group>"; };
+		1F41BDDB189176C50028CF2E /* CSUReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUReachability.m; sourceTree = "<group>"; };
+		1F41BDED189176F10028CF2E /* CSBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSBlocks.h; path = ../../CSLib/CSBlocks.h; sourceTree = "<group>"; };
+		1F41BDEE189176F10028CF2E /* CSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSConstants.h; path = ../../CSLib/CSConstants/CSConstants.h; sourceTree = "<group>"; };
+		1F41BDF1189177510028CF2E /* CSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUtils.h; sourceTree = "<group>"; };
+		1F41BDF31891786B0028CF2E /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		1F41BDF41891786B0028CF2E /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F41BDAF189176920028CF2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F41BDF81891791E0028CF2E /* SystemConfiguration.framework in Frameworks */,
+				1F41BDB9189176920028CF2E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F41BDA8189176920028CF2E = {
+			isa = PBXGroup;
+			children = (
+				1F41BDBA189176920028CF2E /* CSUtils */,
+				1F41BDB7189176920028CF2E /* Frameworks */,
+				1F41BDB6189176920028CF2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F41BDB6189176920028CF2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDB5189176920028CF2E /* CSUtils.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F41BDB7189176920028CF2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */,
+				1F41BDB8189176920028CF2E /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F41BDBA189176920028CF2E /* CSUtils */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDF1189177510028CF2E /* CSUtils.h */,
+				1F41BDED189176F10028CF2E /* CSBlocks.h */,
+				1F41BDEE189176F10028CF2E /* CSConstants.h */,
+				1F41BDC6189176C50028CF2E /* CSGenericOperation */,
+				1F41BDC9189176C50028CF2E /* CSLazyLoadController */,
+				1F41BDCE189176C50028CF2E /* CSMessage */,
+				1F41BDD4189176C50028CF2E /* CSScheduledNotifcations */,
+				1F41BDD9189176C50028CF2E /* External */,
+				1F41BDBB189176920028CF2E /* Supporting Files */,
+			);
+			path = CSUtils;
+			sourceTree = "<group>";
+		};
+		1F41BDBB189176920028CF2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDBC189176920028CF2E /* CSUtils-Info.plist */,
+				1F41BDBD189176920028CF2E /* InfoPlist.strings */,
+				1F41BDC0189176920028CF2E /* CSUtils-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1F41BDC6189176C50028CF2E /* CSGenericOperation */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDC7189176C50028CF2E /* CSGenericOperation.h */,
+				1F41BDC8189176C50028CF2E /* CSGenericOperation.m */,
+			);
+			path = CSGenericOperation;
+			sourceTree = "<group>";
+		};
+		1F41BDC9189176C50028CF2E /* CSLazyLoadController */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDCA189176C50028CF2E /* CSCacheManager.h */,
+				1F41BDCB189176C50028CF2E /* CSCacheManager.m */,
+				1F41BDCC189176C50028CF2E /* CSLazyLoadController.h */,
+				1F41BDCD189176C50028CF2E /* CSLazyLoadController.m */,
+			);
+			path = CSLazyLoadController;
+			sourceTree = "<group>";
+		};
+		1F41BDCE189176C50028CF2E /* CSMessage */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDCF189176C50028CF2E /* CSMessage.h */,
+				1F41BDD0189176C50028CF2E /* CSMessage.m */,
+				1F41BDD1189176C50028CF2E /* CSMessageCenter.h */,
+				1F41BDD2189176C50028CF2E /* CSMessageCenter.m */,
+			);
+			path = CSMessage;
+			sourceTree = "<group>";
+		};
+		1F41BDD4189176C50028CF2E /* CSScheduledNotifcations */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDD5189176C50028CF2E /* CSScheduledNotification.h */,
+				1F41BDD6189176C50028CF2E /* CSScheduledNotification.m */,
+				1F41BDD7189176C50028CF2E /* CSScheduledNotificationCenter.h */,
+				1F41BDD8189176C50028CF2E /* CSScheduledNotificationCenter.m */,
+			);
+			path = CSScheduledNotifcations;
+			sourceTree = "<group>";
+		};
+		1F41BDD9189176C50028CF2E /* External */ = {
+			isa = PBXGroup;
+			children = (
+				1F41BDF31891786B0028CF2E /* NSString+Hash.h */,
+				1F41BDF41891786B0028CF2E /* NSString+Hash.m */,
+				1F41BDDA189176C50028CF2E /* CSUReachability.h */,
+				1F41BDDB189176C50028CF2E /* CSUReachability.m */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1F41BDB0189176920028CF2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F41BDF2189177510028CF2E /* CSUtils.h in Headers */,
+				1F41BDEF189176F10028CF2E /* CSBlocks.h in Headers */,
+				1F41BDF0189176F10028CF2E /* CSConstants.h in Headers */,
+				1F41BDDE189176C50028CF2E /* CSCacheManager.h in Headers */,
+				1F41BDDC189176C50028CF2E /* CSGenericOperation.h in Headers */,
+				1F41BDE0189176C50028CF2E /* CSLazyLoadController.h in Headers */,
+				1F41BDE2189176C50028CF2E /* CSMessage.h in Headers */,
+				1F41BDE4189176C50028CF2E /* CSMessageCenter.h in Headers */,
+				1F41BDE9189176C50028CF2E /* CSScheduledNotificationCenter.h in Headers */,
+				1F41BDE7189176C50028CF2E /* CSScheduledNotification.h in Headers */,
+				1F41BDF51891786B0028CF2E /* NSString+Hash.h in Headers */,
+				1F41BDEB189176C50028CF2E /* CSUReachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1F41BDB4189176920028CF2E /* CSUtils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F41BDC3189176920028CF2E /* Build configuration list for PBXNativeTarget "CSUtils" */;
+			buildPhases = (
+				1F41BDAD189176920028CF2E /* ShellScript */,
+				1F41BDAE189176920028CF2E /* Sources */,
+				1F41BDAF189176920028CF2E /* Frameworks */,
+				1F41BDB0189176920028CF2E /* Headers */,
+				1F41BDB1189176920028CF2E /* Resources */,
+				1F41BDB2189176920028CF2E /* ShellScript */,
+				1F41BDB3189176920028CF2E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CSUtils;
+			productName = CSUtils;
+			productReference = 1F41BDB5189176920028CF2E /* CSUtils.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F41BDA9189176920028CF2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Clover-Studio";
+			};
+			buildConfigurationList = 1F41BDAC189176920028CF2E /* Build configuration list for PBXProject "CSUtils" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1F41BDA8189176920028CF2E;
+			productRefGroup = 1F41BDB6189176920028CF2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F41BDB4189176920028CF2E /* CSUtils */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F41BDB1189176920028CF2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F41BDBF189176920028CF2E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F41BDAD189176920028CF2E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+		};
+		1F41BDB2189176920028CF2E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+		};
+		1F41BDB3189176920028CF2E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \necho \"Xcode version: $XCODE_VERSION_MAJOR\"\n\nif [[ \"$XCODE_VERSION_MAJOR\" == \"0500\" ]]\nthen\n    echo \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nelse\n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\nfi \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F41BDAE189176920028CF2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F41BDEC189176C50028CF2E /* CSUReachability.m in Sources */,
+				1F41BDE1189176C50028CF2E /* CSLazyLoadController.m in Sources */,
+				1F41BDEA189176C50028CF2E /* CSScheduledNotificationCenter.m in Sources */,
+				1F41BDE5189176C50028CF2E /* CSMessageCenter.m in Sources */,
+				1F41BDF61891786B0028CF2E /* NSString+Hash.m in Sources */,
+				1F41BDE8189176C50028CF2E /* CSScheduledNotification.m in Sources */,
+				1F41BDE3189176C50028CF2E /* CSMessage.m in Sources */,
+				1F41BDDF189176C50028CF2E /* CSCacheManager.m in Sources */,
+				1F41BDDD189176C50028CF2E /* CSGenericOperation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1F41BDBD189176920028CF2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F41BDBE189176920028CF2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F41BDC1189176920028CF2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1F41BDC2189176920028CF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F41BDC4189176920028CF2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CSUtils/CSUtils-Prefix.pch";
+				INFOPLIST_FILE = "CSUtils/CSUtils-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1F41BDC5189176920028CF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CSUtils/CSUtils-Prefix.pch";
+				INFOPLIST_FILE = "CSUtils/CSUtils-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F41BDAC189176920028CF2E /* Build configuration list for PBXProject "CSUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F41BDC1189176920028CF2E /* Debug */,
+				1F41BDC2189176920028CF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F41BDC3189176920028CF2E /* Build configuration list for PBXNativeTarget "CSUtils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F41BDC4189176920028CF2E /* Debug */,
+				1F41BDC5189176920028CF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F41BDA9189176920028CF2E /* Project object */;
+}

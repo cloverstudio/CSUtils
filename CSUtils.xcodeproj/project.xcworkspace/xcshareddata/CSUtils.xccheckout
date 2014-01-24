@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8EBCCE4A-8B8D-4B0F-BD44-933504BD72C1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CSUtils</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>801A5E1F-E73E-4CFC-9574-29E90760CBE7</key>
+		<string>https://github.com/cloverstudio/CSUtils.git</string>
+		<key>C004BFF0-B643-4B1B-8BCB-973771B907A2</key>
+		<string>clovergit@local.clover-studio.com:CSLib.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CSUtils.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>801A5E1F-E73E-4CFC-9574-29E90760CBE7</key>
+		<string>../..</string>
+		<key>C004BFF0-B643-4B1B-8BCB-973771B907A2</key>
+		<string>../../../CSLib</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cloverstudio/CSUtils.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>801A5E1F-E73E-4CFC-9574-29E90760CBE7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C004BFF0-B643-4B1B-8BCB-973771B907A2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CSLib</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>801A5E1F-E73E-4CFC-9574-29E90760CBE7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CSUtils</string>
+		</dict>
+	</array>
+</dict>
+</plist>
