@@ -81,11 +81,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
+    cell.textLabel.text = [NSString stringWithFormat:@"Row: %d", indexPath.row];
+    
     NSString *stringUrl = self.items[indexPath.row];
     UIImage *image = [self.lazyLoadController fastCacheImage:[NSURL URLWithString:stringUrl]];
     cell.imageView.image = image;
     if (!image && !tableView.dragging) {
-        [self.lazyLoadController startDownload:[NSURL URLWithString:stringUrl] forIndexPath:indexPath];
+        [self.lazyLoadController startDownload:[NSURL URLWithString:stringUrl]
+                                  forIndexPath:indexPath];
     }
     
     return cell;
@@ -98,7 +101,7 @@
     }
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView {
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
     if ([scrollView isEqual:_tableView]){
         [_lazyLoadController loadImagesForOnscreenRows:[_tableView indexPathsForVisibleRows]];
@@ -121,6 +124,7 @@
 
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     cell.imageView.image = image;
+    [cell setNeedsLayout];
 }
 
 @end

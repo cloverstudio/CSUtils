@@ -85,10 +85,24 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
                      indexPath:(NSIndexPath *)indexPath {
     
     if ([(NSObject *)_delegate respondsToSelector:@selector(lazyLoadController:didReciveImage:fromURL:indexPath:)]) {
-        [_delegate lazyLoadController:self
-                       didReciveImage:image
-                              fromURL:imageURL
-                            indexPath:indexPath];
+        
+        if ([NSThread isMainThread]) {
+            [_delegate lazyLoadController:self
+                           didReciveImage:image
+                                  fromURL:imageURL
+                                indexPath:indexPath];
+        }
+        else {
+            __weak id this = self;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                __strong CSLazyLoadController *strongThis = this;
+                [strongThis.delegate lazyLoadController:strongThis
+                                         didReciveImage:image
+                                                fromURL:imageURL
+                                              indexPath:indexPath];
+            });
+        }
     }
 }
 
@@ -144,15 +158,17 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
         
         NSURLResponse *response = nil;
         NSError *error = nil;
-        NSData *data = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:url
-                                                                                cachePolicy:NSURLCacheStorageNotAllowed
-                                                                            timeoutInterval:20]
+        NSURLRequest *request = [NSURLRequest requestWithURL:url
+                                                 cachePolicy:NSURLRequestReloadIgnoringCacheData
+                                             timeoutInterval:20];
+        
+        NSData *data = [NSURLConnection sendSynchronousRequest:request
                                              returningResponse:&response
                                                          error:&error];
         
         [[CSCacheManager defaultCache] cacheImage:[UIImage imageWithData:data]
-                                                      url:url
-                                               saveToDisk:YES];
+                                              url:url
+                                       saveToDisk:YES];
         
         UIImage *downloadedImage = [UIImage imageWithData:data];
         

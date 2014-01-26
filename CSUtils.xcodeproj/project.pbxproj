@@ -23,13 +23,11 @@
 		1F41BDE8189176C50028CF2E /* CSScheduledNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDD6189176C50028CF2E /* CSScheduledNotification.m */; };
 		1F41BDE9189176C50028CF2E /* CSScheduledNotificationCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDD7189176C50028CF2E /* CSScheduledNotificationCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F41BDEA189176C50028CF2E /* CSScheduledNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDD8189176C50028CF2E /* CSScheduledNotificationCenter.m */; };
-		1F41BDEB189176C50028CF2E /* CSUReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDDA189176C50028CF2E /* CSUReachability.h */; };
+		1F41BDEB189176C50028CF2E /* CSUReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDDA189176C50028CF2E /* CSUReachability.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1F41BDEC189176C50028CF2E /* CSUReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDDB189176C50028CF2E /* CSUReachability.m */; };
 		1F41BDEF189176F10028CF2E /* CSBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDED189176F10028CF2E /* CSBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F41BDF0189176F10028CF2E /* CSConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDEE189176F10028CF2E /* CSConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F41BDF2189177510028CF2E /* CSUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDF1189177510028CF2E /* CSUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F41BDF51891786B0028CF2E /* NSString+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F41BDF31891786B0028CF2E /* NSString+Hash.h */; };
-		1F41BDF61891786B0028CF2E /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F41BDF41891786B0028CF2E /* NSString+Hash.m */; };
 		1F41BDF81891791E0028CF2E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */; };
 		1F45567C1892C6AF00E1CDA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDB8189176920028CF2E /* Foundation.framework */; };
 		1F45567E1892C6AF00E1CDA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F45567D1892C6AF00E1CDA7 /* CoreGraphics.framework */; };
@@ -85,8 +83,6 @@
 		1F41BDED189176F10028CF2E /* CSBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSBlocks.h; path = ../../CSLib/CSBlocks.h; sourceTree = "<group>"; };
 		1F41BDEE189176F10028CF2E /* CSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSConstants.h; path = ../../CSLib/CSConstants/CSConstants.h; sourceTree = "<group>"; };
 		1F41BDF1189177510028CF2E /* CSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUtils.h; sourceTree = "<group>"; };
-		1F41BDF31891786B0028CF2E /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		1F41BDF41891786B0028CF2E /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1F45567B1892C6AF00E1CDA7 /* CSLazyLoadTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSLazyLoadTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F45567D1892C6AF00E1CDA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -247,8 +243,6 @@
 		1F41BDD9189176C50028CF2E /* External */ = {
 			isa = PBXGroup;
 			children = (
-				1F41BDF31891786B0028CF2E /* NSString+Hash.h */,
-				1F41BDF41891786B0028CF2E /* NSString+Hash.m */,
 				1F41BDDA189176C50028CF2E /* CSUReachability.h */,
 				1F41BDDB189176C50028CF2E /* CSUReachability.m */,
 			);
@@ -322,7 +316,6 @@
 				1F41BDE4189176C50028CF2E /* CSMessageCenter.h in Headers */,
 				1F41BDE9189176C50028CF2E /* CSScheduledNotificationCenter.h in Headers */,
 				1F41BDE7189176C50028CF2E /* CSScheduledNotification.h in Headers */,
-				1F41BDF51891786B0028CF2E /* NSString+Hash.h in Headers */,
 				1F41BDEB189176C50028CF2E /* CSUReachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,7 +493,6 @@
 				1F41BDE1189176C50028CF2E /* CSLazyLoadController.m in Sources */,
 				1F41BDEA189176C50028CF2E /* CSScheduledNotificationCenter.m in Sources */,
 				1F41BDE5189176C50028CF2E /* CSMessageCenter.m in Sources */,
-				1F41BDF61891786B0028CF2E /* NSString+Hash.m in Sources */,
 				1F41BDE8189176C50028CF2E /* CSScheduledNotification.m in Sources */,
 				1F41BDE3189176C50028CF2E /* CSMessage.m in Sources */,
 				1F41BDDF189176C50028CF2E /* CSCacheManager.m in Sources */,
@@ -784,6 +776,7 @@
 				1F4556AA1892C6B000E1CDA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F4556AB1892C6B000E1CDA7 /* Build configuration list for PBXNativeTarget "CSLazyLoadTestsTests" */ = {
 			isa = XCConfigurationList;
@@ -792,6 +785,7 @@
 				1F4556AD1892C6B000E1CDA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
