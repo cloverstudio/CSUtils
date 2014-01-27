@@ -7,13 +7,12 @@
 //
 
 #import "CSViewController.h"
-#import "CSLazyLoadController.h"
+#import <CSUtils/CSLazyLoadController.h>
 
 @interface CSViewController () <CSLazyLoadControllerDelegate>
 
 @property (nonatomic, strong) CSLazyLoadController *lazyLoadController;
 @property (nonatomic, strong) NSArray *items;
-
 
 @end
 
