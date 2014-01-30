@@ -54,6 +54,11 @@
 @property (nonatomic, assign) id<CSLazyLoadControllerDelegate> delegate;
 
 /**
+ *  A dictionary with the header values. HTTP header fields must be string values; therefore, each object and key in the headerValues dictionary must be a subclass of NSString. If either the key or value for a key-value pair is not a subclass of NSString, the key-value pair is skipped.
+ */
+@property (nonatomic, strong) NSDictionary *headerValues;
+
+/**
  *  Starts the image download if image is not present in cache. When image is founded delegate lazyLoadController:didReciveImage:fromURL:indexPath: method is called. You usually call this method after fastCacheImage: returns nil.
  *
  *  @param url       URL object which contains image HTTP location.

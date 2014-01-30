@@ -158,9 +158,19 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
         
         NSURLResponse *response = nil;
         NSError *error = nil;
-        NSURLRequest *request = [NSURLRequest requestWithURL:url
-                                                 cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                             timeoutInterval:20];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
+                                                               cachePolicy:NSURLRequestReloadIgnoringCacheData
+                                                           timeoutInterval:20];
+        
+        __strong CSLazyLoadController *strongThis = this;
+        for (NSString *headerField in strongThis.headerValues.allKeys) {
+            
+            NSString *headerValue = strongThis.headerValues[headerField];
+            if (![headerValue isKindOfClass:[NSString class]]) {
+                continue;
+            }
+            [request setValue:headerValue forHTTPHeaderField:headerField];
+        }
         
         NSData *data = [NSURLConnection sendSynchronousRequest:request
                                              returningResponse:&response
@@ -172,7 +182,6 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
         
         UIImage *downloadedImage = [UIImage imageWithData:data];
         
-        __strong CSLazyLoadController *strongThis = this;
         [strongThis notifyDelegateForImage:downloadedImage
                                    fromUrl:url
                                  indexPath:indexPath];
