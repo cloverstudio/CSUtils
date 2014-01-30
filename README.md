@@ -13,3 +13,7 @@ Setup
 *add the following frameworks to your XCode project*
 * MobileCoreServices.framework
 * SystemConfiguration.framework
+
+## Using CSLazyLoadController
+Tutorial which is based on example project in repository:
+http://www.clover-studio.com/blog/using-csutils-ios-framework-for-lazy-loading-images/
