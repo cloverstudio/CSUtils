@@ -48,8 +48,6 @@ CSHTTPMethod const CSHTTPMethodDELETE   = @"DELETE";
     unsigned long long _expectedContentLength;
 }
 
-@property (nonatomic, strong) CSHTTPMethod defaultMethod;
-@property (nonatomic, strong) NSString *defaultAction;
 @property (nonatomic, strong) NSMutableData *receivedData;
 @property (nonatomic, strong) NSURLConnection *connection;
 
@@ -172,8 +170,8 @@ static NSURL *_registratedBaseURL = nil;
                             responseBlock:(CSResponseBlock)responseBlock {
 
     CSMessage *message = [[self alloc] initWithParameters:parameters];
-    message.defaultAction = action;
-    message.defaultMethod = CSHTTPMethodPOST;
+    message.action = action;
+    message.httpMethod = CSHTTPMethodPOST;
     message.responseBlock = responseBlock;
     [message send];
     
@@ -186,7 +184,7 @@ static NSURL *_registratedBaseURL = nil;
 
     CSMessage *message = [[self alloc] initWithParameters:parameters];
     message.baseURL = URL;
-    message.defaultMethod = CSHTTPMethodPOST;
+    message.httpMethod = CSHTTPMethodPOST;
     message.responseBlock = responseBlock;
     [message send];
     
@@ -198,8 +196,8 @@ static NSURL *_registratedBaseURL = nil;
                            responseBlock:(CSResponseBlock)responseBlock {
 
     CSMessage *message = [[self alloc] initWithParameters:parameters];
-    message.defaultAction = action;
-    message.defaultMethod = CSHTTPMethodGET;
+    message.action = action;
+    message.httpMethod = CSHTTPMethodGET;
     message.responseBlock = responseBlock;
     [message send];
     
@@ -211,7 +209,7 @@ static NSURL *_registratedBaseURL = nil;
 
     CSMessage *message = [[self alloc] init];
     message.baseURL = URL;
-    message.defaultMethod = CSHTTPMethodGET;
+    message.httpMethod = CSHTTPMethodGET;
     message.responseBlock = responseBlock;
     [message send];
     
@@ -223,8 +221,8 @@ static NSURL *_registratedBaseURL = nil;
                            responseBlock:(CSResponseBlock)responseBlock {
 
     CSMessage *message = [[self alloc] initWithParameters:parameters];
-    message.defaultAction = action;
-    message.defaultMethod = CSHTTPMethodPUT;
+    message.action = action;
+    message.httpMethod = CSHTTPMethodPUT;
     message.responseBlock = responseBlock;
     [message send];
     
@@ -237,7 +235,7 @@ static NSURL *_registratedBaseURL = nil;
 
     CSMessage *message = [[self alloc] initWithParameters:parameters];
     message.baseURL = URL;
-    message.defaultMethod = CSHTTPMethodPUT;
+    message.httpMethod = CSHTTPMethodPUT;
     message.responseBlock = responseBlock;
     [message send];
     
@@ -250,8 +248,8 @@ static NSURL *_registratedBaseURL = nil;
                               responseBlock:(CSResponseBlock)responseBlock {
 
     CSMessage *message = [[self alloc] initWithParameters:parameters];
-    message.defaultAction = action;
-    message.defaultMethod = CSHTTPMethodDELETE;
+    message.action = action;
+    message.httpMethod = CSHTTPMethodDELETE;
     message.responseBlock = responseBlock;
     [message send];
     
@@ -264,7 +262,7 @@ static NSURL *_registratedBaseURL = nil;
 
     CSMessage *message = [[self alloc] initWithParameters:parameters];
     message.baseURL = URL;
-    message.defaultMethod = CSHTTPMethodDELETE;
+    message.httpMethod = CSHTTPMethodDELETE;
     message.responseBlock = responseBlock;
     [message send];
     
@@ -308,7 +306,7 @@ static NSURL *_registratedBaseURL = nil;
 - (void)setup {
 
     self.receivedData = [[NSMutableData alloc] init];
-    self.defaultMethod = CSHTTPMethodPOST;
+    self.httpMethod = CSHTTPMethodPOST;
     self.fileField = @"file";
     
     _bytesReceived = 0;
@@ -384,18 +382,6 @@ static NSURL *_registratedBaseURL = nil;
         }
     }
     [[CSMessageCenter defaultCenter] addMessage:self];
-}
-
-- (NSString *)action {
-    
-    /**
-     *  Action must be set eather using constructor or by overriding action method in subclass.
-     */
-    return self.defaultAction;
-}
-
-- (CSHTTPMethod)httpMethod {
-    return self.defaultMethod;
 }
 
 #pragma mark - Getters

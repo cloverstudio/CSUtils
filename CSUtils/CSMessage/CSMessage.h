@@ -103,12 +103,12 @@ extern NSInteger const CSMessageErrorCodeInvalidArgument;
 /**
  *  HTTP path for request. Usually this is last path component of NSURL object.
  */
-@property (nonatomic, readonly) NSString *action;
+@property (nonatomic, strong) NSString *action;
 
 /**
  *  HTTP method tipe. Default is POST.
  */
-@property (nonatomic, readonly) CSHTTPMethod httpMethod;
+@property (nonatomic, strong) CSHTTPMethod httpMethod;
 
 #pragma mark - Class Methods
 
