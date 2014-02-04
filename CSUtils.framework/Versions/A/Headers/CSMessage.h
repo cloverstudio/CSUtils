@@ -8,15 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CSGenericOperation.h"
-
-/**
- *  HTTP request method types.
- */
-typedef NSString *CSHTTPMethod;
-extern CSHTTPMethod const CSHTTPMethodGET;      ///HTTP GET method.
-extern CSHTTPMethod const CSHTTPMethodPOST;     ///HTTP POST method.
-extern CSHTTPMethod const CSHTTPMethodPUT;      ///HTTP PUT method.
-extern CSHTTPMethod const CSHTTPMethodDELETE;   ///HTTP DELETE method.
+#import "CSHTTPAssistance.h"
 
 /**
  *  Returns a string, replacing certain characters with the equivalent percent escape sequence based on the specified encoding.
@@ -81,7 +73,7 @@ extern NSInteger const CSMessageErrorCodeInvalidArgument;
 @property (copy) CSDownloadProgressBlock downloadProgressBlock;
 
 /**
- *  Dictionary containing data to be sent.
+ *  A dictionary with the parameter values. HTTP parameter must be string values; therefore, each object and key in the parameters dictionary must be a subclass of NSString. If either the key or value for a key-value pair is not a subclass of NSString, the key-value pair is skipped.
  */
 @property (nonatomic, strong) NSDictionary *parameters;
 

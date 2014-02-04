@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F013B5F18A13B1400F75A1D /* CSURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F013B5D18A13B1400F75A1D /* CSURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F013B6018A13B1400F75A1D /* CSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F013B5E18A13B1400F75A1D /* CSURL.m */; };
+		1F013B6518A13F7400F75A1D /* CSURLUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F013B6318A13F7400F75A1D /* CSURLUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		1F013B6618A13F7400F75A1D /* CSURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F013B6418A13F7400F75A1D /* CSURLUtils.m */; };
+		1F013B6918A14A6F00F75A1D /* CSHTTPAssistance.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F013B6718A14A6F00F75A1D /* CSHTTPAssistance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F013B6A18A14A6F00F75A1D /* CSHTTPAssistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F013B6818A14A6F00F75A1D /* CSHTTPAssistance.m */; };
+		1F013B6C18A14B8B00F75A1D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F013B6B18A14B8B00F75A1D /* MobileCoreServices.framework */; };
+		1F013B6D18A14B9E00F75A1D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F013B6B18A14B8B00F75A1D /* MobileCoreServices.framework */; };
+		1F013B6E18A14BA100F75A1D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F013B6B18A14B8B00F75A1D /* MobileCoreServices.framework */; };
 		1F3E0EA8189C06560058B29C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F41BDB8189176920028CF2E /* Foundation.framework */; };
 		1F3E0EA9189C06560058B29C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F45567D1892C6AF00E1CDA7 /* CoreGraphics.framework */; };
 		1F3E0EAA189C06560058B29C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F45567F1892C6AF00E1CDA7 /* UIKit.framework */; };
@@ -82,6 +91,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F013B5D18A13B1400F75A1D /* CSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSURL.h; sourceTree = "<group>"; };
+		1F013B5E18A13B1400F75A1D /* CSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSURL.m; sourceTree = "<group>"; };
+		1F013B6318A13F7400F75A1D /* CSURLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSURLUtils.h; sourceTree = "<group>"; };
+		1F013B6418A13F7400F75A1D /* CSURLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSURLUtils.m; sourceTree = "<group>"; };
+		1F013B6718A14A6F00F75A1D /* CSHTTPAssistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSHTTPAssistance.h; sourceTree = "<group>"; };
+		1F013B6818A14A6F00F75A1D /* CSHTTPAssistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSHTTPAssistance.m; sourceTree = "<group>"; };
+		1F013B6B18A14B8B00F75A1D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		1F3E0EA7189C06560058B29C /* CSGenericOperationTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSGenericOperationTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3E0EAD189C06560058B29C /* CSGenericOperationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CSGenericOperationTests-Info.plist"; sourceTree = "<group>"; };
 		1F3E0EAF189C06560058B29C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -152,6 +168,7 @@
 				1F3E0ED7189C07C10058B29C /* CSUtils.framework in Frameworks */,
 				1F3E0EA9189C06560058B29C /* CoreGraphics.framework in Frameworks */,
 				1F3E0EAA189C06560058B29C /* UIKit.framework in Frameworks */,
+				1F013B6E18A14BA100F75A1D /* MobileCoreServices.framework in Frameworks */,
 				1F3E0EA8189C06560058B29C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F013B6C18A14B8B00F75A1D /* MobileCoreServices.framework in Frameworks */,
 				1F41BDF81891791E0028CF2E /* SystemConfiguration.framework in Frameworks */,
 				1F41BDB9189176920028CF2E /* Foundation.framework in Frameworks */,
 			);
@@ -182,6 +200,7 @@
 				1F4556AE1892CAD000E1CDA7 /* CSUtils.framework in Frameworks */,
 				1F45567E1892C6AF00E1CDA7 /* CoreGraphics.framework in Frameworks */,
 				1F4556801892C6AF00E1CDA7 /* UIKit.framework in Frameworks */,
+				1F013B6D18A14B9E00F75A1D /* MobileCoreServices.framework in Frameworks */,
 				1F45567C1892C6AF00E1CDA7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +300,7 @@
 		1F41BDB7189176920028CF2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F013B6B18A14B8B00F75A1D /* MobileCoreServices.framework */,
 				1F41BDF71891791E0028CF2E /* SystemConfiguration.framework */,
 				1F41BDB8189176920028CF2E /* Foundation.framework */,
 				1F45567D1892C6AF00E1CDA7 /* CoreGraphics.framework */,
@@ -332,6 +352,8 @@
 				1F41BDCB189176C50028CF2E /* CSCacheManager.m */,
 				1F41BDCC189176C50028CF2E /* CSLazyLoadController.h */,
 				1F41BDCD189176C50028CF2E /* CSLazyLoadController.m */,
+				1F013B5D18A13B1400F75A1D /* CSURL.h */,
+				1F013B5E18A13B1400F75A1D /* CSURL.m */,
 			);
 			path = CSLazyLoadController;
 			sourceTree = "<group>";
@@ -343,6 +365,10 @@
 				1F41BDD0189176C50028CF2E /* CSMessage.m */,
 				1F41BDD1189176C50028CF2E /* CSMessageCenter.h */,
 				1F41BDD2189176C50028CF2E /* CSMessageCenter.m */,
+				1F013B6318A13F7400F75A1D /* CSURLUtils.h */,
+				1F013B6418A13F7400F75A1D /* CSURLUtils.m */,
+				1F013B6718A14A6F00F75A1D /* CSHTTPAssistance.h */,
+				1F013B6818A14A6F00F75A1D /* CSHTTPAssistance.m */,
 			);
 			path = CSMessage;
 			sourceTree = "<group>";
@@ -427,13 +453,16 @@
 				1F41BDF2189177510028CF2E /* CSUtils.h in Headers */,
 				1F41BDEF189176F10028CF2E /* CSBlocks.h in Headers */,
 				1F41BDF0189176F10028CF2E /* CSConstants.h in Headers */,
+				1F013B6918A14A6F00F75A1D /* CSHTTPAssistance.h in Headers */,
 				1F41BDDE189176C50028CF2E /* CSCacheManager.h in Headers */,
 				1F41BDDC189176C50028CF2E /* CSGenericOperation.h in Headers */,
 				1F41BDE0189176C50028CF2E /* CSLazyLoadController.h in Headers */,
 				1F41BDE2189176C50028CF2E /* CSMessage.h in Headers */,
 				1F41BDE4189176C50028CF2E /* CSMessageCenter.h in Headers */,
-				1F41BDE9189176C50028CF2E /* CSScheduledNotificationCenter.h in Headers */,
 				1F41BDE7189176C50028CF2E /* CSScheduledNotification.h in Headers */,
+				1F41BDE9189176C50028CF2E /* CSScheduledNotificationCenter.h in Headers */,
+				1F013B5F18A13B1400F75A1D /* CSURL.h in Headers */,
+				1F013B6518A13F7400F75A1D /* CSURLUtils.h in Headers */,
 				1F41BDEB189176C50028CF2E /* CSUReachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,6 +713,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F013B6018A13B1400F75A1D /* CSURL.m in Sources */,
+				1F013B6A18A14A6F00F75A1D /* CSHTTPAssistance.m in Sources */,
 				1F41BDEC189176C50028CF2E /* CSUReachability.m in Sources */,
 				1F41BDE1189176C50028CF2E /* CSLazyLoadController.m in Sources */,
 				1F41BDEA189176C50028CF2E /* CSScheduledNotificationCenter.m in Sources */,
@@ -692,6 +723,7 @@
 				1F41BDE3189176C50028CF2E /* CSMessage.m in Sources */,
 				1F41BDDF189176C50028CF2E /* CSCacheManager.m in Sources */,
 				1F41BDDD189176C50028CF2E /* CSGenericOperation.m in Sources */,
+				1F013B6618A13F7400F75A1D /* CSURLUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1062,6 +1094,7 @@
 				1F3E0ED3189C06560058B29C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F3E0ED4189C06560058B29C /* Build configuration list for PBXNativeTarget "CSGenericOperationTestsTests" */ = {
 			isa = XCConfigurationList;
@@ -1070,6 +1103,7 @@
 				1F3E0ED6189C06560058B29C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F41BDAC189176920028CF2E /* Build configuration list for PBXProject "CSUtils" */ = {
 			isa = XCConfigurationList;

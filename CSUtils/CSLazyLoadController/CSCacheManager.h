@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class CSURL;
+
 /**
  *  CSCacheController class is intented to work in pair with CSLazyLoadController. It caches UIImage objects downloaded from network using RAM as default storage and optionaly to disk. Saving files to disk sometimes can take some time so it is an option.
  */
@@ -31,7 +33,7 @@
  *  @param shouldSave Boolean value determening whether image should be written to device disk or not.
  */
 - (void)cacheImage:(UIImage *)image
-               url:(NSURL *)URL
+               url:(CSURL *)URL
         saveToDisk:(BOOL)shouldSave;
 
 #pragma mark - Getting Images
@@ -43,7 +45,7 @@
  *
  *  @return Image object associated with URL object.
  */
-- (UIImage *)readCachedImage:(NSURL *)URL
+- (UIImage *)readCachedImage:(CSURL *)URL
                     fromDisk:(BOOL)readFromDisk;
 
 @end

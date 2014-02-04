@@ -8,6 +8,7 @@
 
 #import "CSViewController.h"
 #import <CSUtils/CSLazyLoadController.h>
+#import <CSUtils/CSURL.h>
 
 @interface CSViewController () <CSLazyLoadControllerDelegate>
 
@@ -83,14 +84,22 @@
     cell.textLabel.text = [NSString stringWithFormat:@"Row: %d", indexPath.row];
     
     NSString *stringUrl = self.items[indexPath.row];
-    UIImage *image = [self.lazyLoadController fastCacheImage:[NSURL URLWithString:stringUrl]];
+    
+    stringUrl = @"http://69.90.79.130/DownloadSample";
+    
+    UIImage *image = [self.lazyLoadController fastCacheImage:[CSURL URLWithString:stringUrl parameters:[self parameters] method:CSHTTPMethodPOST]];
     cell.imageView.image = image;
     if (!image && !tableView.dragging) {
-        [self.lazyLoadController startDownload:[NSURL URLWithString:stringUrl]
+        [self.lazyLoadController startDownload:[CSURL URLWithString:stringUrl parameters:[self parameters] method:CSHTTPMethodPOST]
                                   forIndexPath:indexPath];
     }
     
     return cell;
+}
+
+- (NSDictionary *)parameters {
+    return @{@"fileItemId": @"177",
+             @"token": @"66f97896-0a67-4a92-ad22-740a4994e10f"};
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
@@ -109,16 +118,17 @@
 
 #pragma mark - CSLazyLoadControllerDelegate
 
-- (NSURL *)lazyLoadController:(CSLazyLoadController *)loadController
+- (CSURL *)lazyLoadController:(CSLazyLoadController *)loadController
        urlForImageAtIndexPath:(NSIndexPath *)indexPath {
 
     NSString *stringUrl = self.items[indexPath.row];
-    return [NSURL URLWithString:stringUrl];
+    stringUrl = @"http://69.90.79.130/DownloadSample";
+    return [CSURL URLWithString:stringUrl parameters:[self parameters] method:CSHTTPMethodPOST];
 }
 
 - (void)lazyLoadController:(CSLazyLoadController *)loadController
             didReciveImage:(UIImage *)image
-                   fromURL:(NSURL *)url
+                   fromURL:(CSURL *)url
                  indexPath:(NSIndexPath *)indexPath {
 
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];

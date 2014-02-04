@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class CSLazyLoadController;
+@class CSURL;
 
 /**
  *  The delegate of a CSLazyLoadController object must adopt the CSLazyLoadControllerDelegate protocol. Methods of the protocol provide delegate feedback when image is loaded or when aditional info is required. All methods are optional since CSLazyLoadController object can be used just for reading cache without need to notify delegate when image is loaded.
@@ -25,7 +26,7 @@
  *
  *  @return The URL object describing image HTTP location.
  */
-- (NSURL *)lazyLoadController:(CSLazyLoadController *)loadController
+- (CSURL *)lazyLoadController:(CSLazyLoadController *)loadController
        urlForImageAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
@@ -38,7 +39,7 @@
  */
 - (void)lazyLoadController:(CSLazyLoadController *)loadController
             didReciveImage:(UIImage *)image
-                   fromURL:(NSURL *)url
+                   fromURL:(CSURL *)url
                  indexPath:(NSIndexPath *)indexPath;
 @end
 
@@ -64,8 +65,9 @@
  *  @param url       URL object which contains image HTTP location.
  *  @param indexPath IndexPath object that describes image position.
  */
-- (void)startDownload:(NSURL *)url
+- (void)startDownload:(CSURL *)url
          forIndexPath:(NSIndexPath *)indexPath;
+
 
 /**
  *  Starts multiply image download, for each object in given array. You usually call this method when tableView or collectionView stops with scrolling.
@@ -81,6 +83,6 @@
  *
  *  @return Image object associated with URL object.
  */
-- (UIImage *)fastCacheImage:(NSURL *)url;
+- (UIImage *)fastCacheImage:(CSURL *)url;
 
 @end

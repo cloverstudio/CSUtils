@@ -8,6 +8,7 @@
 
 #import "CSLazyLoadController.h"
 #import "CSCacheManager.h"
+#import "CSURL.h"
 
 static NSOperationQueue *_cacheOperationQueue = nil;
 static NSOperationQueue *_downloadingOperationQueue = nil;
@@ -81,7 +82,7 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
 #pragma mark - Actions
 
 - (void)notifyDelegateForImage:(UIImage *)image
-                       fromUrl:(NSURL *)imageURL
+                       fromUrl:(CSURL *)imageURL
                      indexPath:(NSIndexPath *)indexPath {
     
     if ([(NSObject *)_delegate respondsToSelector:@selector(lazyLoadController:didReciveImage:fromURL:indexPath:)]) {
@@ -106,7 +107,7 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
     }
 }
 
-- (void)readURLCache:(NSURL *)url
+- (void)readURLCache:(CSURL *)url
            indexPath:(NSIndexPath *)indexPath {
 
     if (!url) {
@@ -141,7 +142,7 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
 }
 
 
-- (void)readURLContnent:(NSURL *)url
+- (void)readURLContnent:(CSURL *)url
               indexPath:(NSIndexPath *)indexPath {
 
     if (!url) {
@@ -158,19 +159,9 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
         
         NSURLResponse *response = nil;
         NSError *error = nil;
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url
-                                                               cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                                           timeoutInterval:20];
         
         __strong CSLazyLoadController *strongThis = this;
-        for (NSString *headerField in strongThis.headerValues.allKeys) {
-            
-            NSString *headerValue = strongThis.headerValues[headerField];
-            if (![headerValue isKindOfClass:[NSString class]]) {
-                continue;
-            }
-            [request setValue:headerValue forHTTPHeaderField:headerField];
-        }
+        NSMutableURLRequest *request = [strongThis urlRequestForURL:url];
         
         NSData *data = [NSURLConnection sendSynchronousRequest:request
                                              returningResponse:&response
@@ -192,8 +183,58 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
     [[CSLazyLoadController sharedDownloadingOperationQueue] addOperation:operation];
 }
 
-- (void)startDownload:(NSURL *)url
+- (NSMutableURLRequest *)urlRequestForURL:(CSURL *)url {
+    
+    NSAssert(([url isKindOfClass:[CSURL class]] || !url), @"url argument must be CSURL kind");
+    if (!url){return nil;}
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url.httpURL
+                                                           cachePolicy:NSURLRequestReloadIgnoringCacheData
+                                                       timeoutInterval:20];
+    [request setHTTPMethod:[url httpMethod]];
+
+    if (![url.httpMethod isEqualToString:CSHTTPMethodGET] && url.parameters.count) {
+        
+        NSMutableArray *parts = [[NSMutableArray alloc] init];
+        for (NSString *key in url.parameters) {
+            if (![key isKindOfClass:[NSString class]] || ![url.parameters[key] isKindOfClass:[NSString class]]) {
+                continue;
+            }
+            
+            NSString *encodedValue = [url.parameters[key] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            NSString *encodedKey = [key stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            NSString *part = [NSString stringWithFormat:@"%@=%@", encodedKey, encodedValue];
+            [parts addObject:part];
+        }
+        
+        NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
+
+        NSData *httpBody = [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
+        [request setHTTPBody:httpBody];
+        
+        [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)httpBody.length] forHTTPHeaderField:@"Content-Length"];
+        [request setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    }
+    
+    for (NSString *headerField in self.headerValues.allKeys) {
+        
+        NSString *headerValue = self.headerValues[headerField];
+        if (![headerValue isKindOfClass:[NSString class]]) {
+            continue;
+        }
+        [request setValue:headerValue forHTTPHeaderField:headerField];
+    }
+    return request;
+}
+
+- (void)startDownload:(CSURL *)url
          forIndexPath:(NSIndexPath *)indexPath {
+    
+    if (!([url isKindOfClass:[CSURL class]] || !url)) {
+        [[NSException exceptionWithName:NSInvalidArgumentException
+                                 reason:@"url argument must be CSURL kind"
+                               userInfo:nil] raise];
+    }
     
     [self readURLCache:url
              indexPath:indexPath];
@@ -204,7 +245,7 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
     NSArray *copyPaths = [indexPaths copy];
     for (NSIndexPath *indexPath in copyPaths) {
         
-        NSURL *url = nil;
+        CSURL *url = nil;
         if ([(NSObject *)_delegate respondsToSelector:@selector(lazyLoadController:urlForImageAtIndexPath:)]) {
             
             url = [_delegate lazyLoadController:self
@@ -217,10 +258,16 @@ static NSMutableSet   *_downloadingUrlsSet = nil;
 	}
 }
 
-- (UIImage *)fastCacheImage:(NSURL *)url {
+- (UIImage *)fastCacheImage:(CSURL *)url {
+    
+    if (!([url isKindOfClass:[CSURL class]] || !url)) {
+        [[NSException exceptionWithName:NSInvalidArgumentException
+                                 reason:@"url argument must be CSURL kind"
+                               userInfo:nil] raise];
+    }
     
     return [[CSCacheManager defaultCache] readCachedImage:url
-                                                         fromDisk:NO];
+                                                 fromDisk:NO];
 }
 
 @end

@@ -7,9 +7,9 @@
 //
 
 #import "CSMessage.h"
-#import <MobileCoreServices/MobileCoreServices.h>
 #import "CSUReachability.h"
 #import "CSMessageCenter.h"
+#import "CSURLUtils.h"
 
 //String Encoding
 NSString * CSURLEncodedStringFromStringWithEncoding(NSString *string, NSStringEncoding encoding) {
@@ -36,12 +36,6 @@ NSString * const CSMessageErrorUserInfoKey                  = @"CSMessageErrorUs
 //Codes
 NSInteger const CSMessageErrorCodeInvalidArgument           = 701;
 
-//HTTP methods
-CSHTTPMethod const CSHTTPMethodGET      = @"GET";
-CSHTTPMethod const CSHTTPMethodPOST     = @"POST";
-CSHTTPMethod const CSHTTPMethodPUT      = @"PUT";
-CSHTTPMethod const CSHTTPMethodDELETE   = @"DELETE";
-
 @interface CSMessage () <NSURLConnectionDelegate, NSURLConnectionDataDelegate> {
 
     NSUInteger _bytesReceived;
@@ -54,22 +48,6 @@ CSHTTPMethod const CSHTTPMethodDELETE   = @"DELETE";
 @end
 
 @interface CSMessage (NSURLConnectionHelper)
-
-/**
- *  Generates boundary string used in httpBody.
- *
- *  @return String object containing generated boundary.
- */
-- (NSString *)generateBoundaryString;
-
-/**
- *  Generates mimeType string depending on file that is path pointing on.
- *
- *  @param path Path to file in system.
- *
- *  @return String object containing mimeType.
- */
-- (NSString *)mimeTypeForPath:(NSString *)path;
 
 /**
  * Generates endpoint URL object containing baseURL and action.
@@ -349,23 +327,19 @@ static NSURL *_registratedBaseURL = nil;
 
     if ([rawResponse isKindOfClass:[NSData class]]) {
         
-        id response = rawResponse;
-        
-        if ([NSJSONSerialization isValidJSONObject:rawResponse]) {
-            
-            NSError *error = nil;
-            response = [NSJSONSerialization JSONObjectWithData:rawResponse
-                                                          options:0
-                                                            error:&error];
+        NSError *error = nil;
+        rawResponse = [NSJSONSerialization JSONObjectWithData:rawResponse
+                                                   options:0
+                                                     error:&error];
 #ifdef DEBUG
-            if(error) {
-                CSLog(@"%@, %@",
-                      [error localizedDescription],
-                      [[NSString alloc] initWithData:rawResponse encoding:NSUTF8StringEncoding]);
-            }
-#endif
+        if(error) {
+            CSLog(@"%@, %@",
+                  [error localizedDescription],
+                  [[NSString alloc] initWithData:rawResponse encoding:NSUTF8StringEncoding]);
         }
-        return response;
+#endif
+
+        return rawResponse;
     }
     
     return rawResponse;
@@ -427,7 +401,7 @@ static NSURL *_registratedBaseURL = nil;
 
     NSMutableData *httpBody = (self.httpMethod != CSHTTPMethodGET ? [[NSMutableData alloc] init] : nil);
     
-    NSString *boundary = [self generateBoundaryString];
+    NSString *boundary = [CSURLUtils generateBoundaryString];
     [self appendParameters:httpBody boundary:boundary];
     
     if (self.filePath && [self httpMethod] == CSHTTPMethodPOST) {
@@ -499,7 +473,7 @@ static NSURL *_registratedBaseURL = nil;
     [httpBody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n", self.fileField, filename] dataUsingEncoding:NSUTF8StringEncoding]];
     
     //configure mime
-    NSString *mimetype = [self mimeTypeForPath:self.filePath];
+    NSString *mimetype = [CSURLUtils mimeTypeForPath:self.filePath];
     [httpBody appendData:[[NSString stringWithFormat:@"Content-Type: %@\r\n\r\n", mimetype] dataUsingEncoding:NSUTF8StringEncoding]];
     
     //attach data
@@ -578,42 +552,6 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite {
 @end
 
 @implementation CSMessage (NSURLConnectionHelper)
-
-- (NSString *)generateBoundaryString {
-    
-    // generate boundary string
-    //
-    // adapted from http://developer.apple.com/library/ios/#samplecode/SimpleURLConnections
-    
-    CFUUIDRef  uuid;
-    NSString  *uuidStr;
-    
-    uuid = CFUUIDCreate(NULL);
-    assert(uuid != NULL);
-    
-    uuidStr = CFBridgingRelease(CFUUIDCreateString(NULL, uuid));
-    assert(uuidStr != NULL);
-    
-    CFRelease(uuid);
-    
-    return [NSString stringWithFormat:@"Boundary-%@", uuidStr];
-}
-
-- (NSString *)mimeTypeForPath:(NSString *)path {
-    
-    // get a mime type for an extension using MobileCoreServices.framework
-    
-    CFStringRef extension = (__bridge CFStringRef)[path pathExtension];
-    CFStringRef UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, extension, NULL);
-    assert(UTI != NULL);
-    
-    NSString *mimetype = CFBridgingRelease(UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassMIMEType));
-    assert(mimetype != NULL);
-    
-    CFRelease(UTI);
-    
-    return mimetype;
-}
 
 - (NSURL *)targetPath {
     

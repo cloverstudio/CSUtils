@@ -16,10 +16,12 @@
 //Classes
 #import "CSGenericOperation.h"
 #import "CSCacheManager.h"
+#import "CSHTTPAssistance.h"
 #import "CSLazyLoadController.h"
 #import "CSMessage.h"
 #import "CSMessageCenter.h"
 #import "CSScheduledNotification.h"
 #import "CSScheduledNotificationCenter.h"
+#import "CSURL.h"
 
 #endif
